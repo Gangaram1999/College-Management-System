@@ -1,0 +1,26 @@
+h1{
+    color: black;
+    background-color: transparent;
+    font-size: x-large;
+}
+p{
+    color: black;
+    text-shadow: 25px;
+    background-color: transparent;
+    font-size: large;
+    text-align: right;
+}
+body{
+    background-color: aquamarine;
+}
+table,th,td{
+    border: 5px solid black;
+    border-collapse: collapse;
+    background-image: url("collegewallpaper.jpg");
+    margin-right:auto;
+    color: black;
+  
+  }
+  h2{
+    color: black;
+  }

@@ -1,0 +1,59 @@
+<?php
+// In your dashboard.php or any other protected page
+session_start();
+
+// Check if the user is not logged in, redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="student _dashboard.css">
+</head>
+<body>
+
+<div class="sidenav">
+    <h1><b>Student Dashboard</b></h1>
+    <hr style="height:4px;width:100%;padding-left: 1px; border-width:0;color:red;background-color:red"><br>
+
+  <a href="displaystudent.php">All Student</a>
+  <a href="displayteacher.php">All Teacher</a>
+  <a href="diplaycourse.php">All Course</a>
+  <button class="dropdown-btn">Subject
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="computersubject.html">Computer</a>
+    <a href="civilsubject.html">Civil</a>
+    <a href="architecturesubject.html">Architecture</a>
+  </div><br><br>
+
+<script>
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}
+</script>
+
+<a href="logout.php">Logout</a>
+<br><br><br><br>
+</body>
+</html> 
+

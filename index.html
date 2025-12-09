@@ -1,0 +1,62 @@
+<?php
+// In your dashboard.php or any other protected page
+session_start();
+
+// Check if the user is not logged in, redirect to login page
+if (!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <title>ADMIN PAGE</title>
+    </head>
+    <body>
+
+        <table style="width: 100%;" style="height: 10%;">
+            <tr><th>
+                <div>
+                  <label>MADAN BHANDARI MEMORIAL ACADEMY NEPAL</label>
+                    <a href="teacherlogin.php" class="btn btn-success">Teacher Login</a>
+                    <a href="studentlogin.php" class="btn btn-success"> Student Login</a>
+                    <a href="contact.html">Contact</a>
+                    <a href="registration.html" class="btn btn-success">Registration</a>
+                </div>
+              </th>
+            </tr>
+          </table>
+
+
+
+          <div class="container">
+
+            <div class="row">
+    
+                <div class="col-md-4">
+    
+                    
+                    
+                </div>
+    
+                <div class="col-md-8">
+                    
+    
+                    <h1><b>Welcome to Madan Bhandari Memorial Academy Nepal</b></h1>
+                    <hr style="height:4px;width:100%;padding-left: 1px; border-width:0;color:black;background-color:black"><br>
+                    <img  class="welcome_img "src="img/madanbhandari1.jpg" alt="Madan Bhandari" width="600" height="300" align="right" align="top">
+                    <p><b>Madan Bhandari Memorial Academy Nepal (MBMAN) is a Community Organization established in1993 A.D. in memory of the great visionary leader Madan Kumar Bhandari. The organization is committed to materialize the vision of leader Bhandari by providing the most possible opportunities of employment to the deprived people in the community, through Formal/Non-formal, Technical Education and Skill Based Vocational Training, and providing services through Right Based Community Development Program. The head office of MBMAN is located at Urlabari Municipality, Ward no. 3, Mangalbare of Morang district.</b></p>
+                    <hr style="height:4px;width:100%;padding-left: 1px; border-width:0;color:black;background-color:black"><br><br>
+                </div>
+                
+    
+            </div>
+            
+    
+        </div>    
+    
+    </body>
+</html>
